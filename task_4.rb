@@ -5,9 +5,9 @@ alphabet = ('a'..'z').to_a
 vowels = ['a', 'e', 'i', 'o', 'u', 'y']
 
 # Создание хэша-алфавита путем итерации массива с счетчиком i
-alphabet_hash = Hash.new
+alphabet_hash = {}
 i = 1
-alphabet.each { |x| alphabet_hash[x.to_sym] = i 
+alphabet.each { |x| alphabet_hash[x] = i 
   i += 1 }
 
 # Создание хэша-алфавита из гласных и вывод хэша
