@@ -12,7 +12,9 @@ calendar = {1=> 31, 2=> [28, 29], 3=> 31, 4=> 30, 5=> 31,
             11=> 30, 12=> 31}
 
 # Проверка года на вискосность, выбор количества дней в феврале
-if year % 4 == 0 && year % 100 == 0 && year % 400 == 0
+if year % 4 == 0
+  calendar[2] = calendar[2][1]
+elsif year % 100 == 0 && year % 400 == 0
   calendar[2] = calendar[2][1]
 else
   calendar[2] = calendar[2][0]
