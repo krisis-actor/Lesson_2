@@ -22,11 +22,12 @@ end
 
 # Подсчет дней в месяцах, не включая текущий
 month_days = 0
-calendar.each { |key,value|
+calendar.each do 
+  |key,value|
   if key < month
     month_days += value
   end
- }
+end
 
 # Расчет и вывод результат
 order_date = day + month_days
